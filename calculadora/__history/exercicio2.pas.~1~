@@ -1,0 +1,163 @@
+unit exercicio2;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls;
+
+type
+  TForm1 = class(TForm)
+    Panel1: TPanel;
+    Button1: TButton;
+    Button2: TButton;
+    Button3: TButton;
+    Button4: TButton;
+    Button5: TButton;
+    Button6: TButton;
+    Button7: TButton;
+    Button8: TButton;
+    Edit1: TEdit;
+    Label1: TLabel;
+    Button9: TButton;
+    Button10: TButton;
+    Button11: TButton;
+    Button12: TButton;
+    Button13: TButton;
+    Button14: TButton;
+    Button15: TButton;
+    procedure Button1Click(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
+    procedure Button3Click(Sender: TObject);
+    procedure Button4Click(Sender: TObject);
+    procedure Button5Click(Sender: TObject);
+    procedure Button6Click(Sender: TObject);
+    procedure Button7Click(Sender: TObject);
+    procedure Button8Click(Sender: TObject);
+    procedure Button9Click(Sender: TObject);
+    procedure Button10Click(Sender: TObject);
+    procedure Button14Click(Sender: TObject);
+    procedure Button13Click(Sender: TObject);
+    procedure Button12Click(Sender: TObject);
+    procedure Button11Click(Sender: TObject);
+    procedure Button15Click(Sender: TObject);
+
+  private
+    { Private declarations }
+
+  public
+    { Public declarations }
+     num: Double;
+     operacao: String;
+     result: Double;
+
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm1.Button10Click(Sender: TObject);
+begin
+ Edit1.Text := Edit1.Text + '0';
+end;
+
+procedure TForm1.Button11Click(Sender: TObject);
+begin
+ num := StrToFloat(Edit1.text);
+ operacao := 'dividir';
+ Edit1.Text := '';
+end;
+
+procedure TForm1.Button12Click(Sender: TObject);
+begin
+ num := StrToFloat(Edit1.text);
+ operacao := 'vezes';
+ Edit1.Text := '';
+end;
+
+procedure TForm1.Button13Click(Sender: TObject);
+begin
+ num := StrToFloat(Edit1.text);
+ operacao := 'menos';
+ Edit1.Text := '';
+end;
+
+procedure TForm1.Button14Click(Sender: TObject);
+begin
+ num := StrToFloat(Edit1.text);
+ operacao := 'mais';
+ Edit1.Text := '';
+
+end;
+
+procedure TForm1.Button15Click(Sender: TObject);
+begin
+ if (operacao = 'mais') then
+ result := num + StrToFloat(Edit1.text);
+ Edit1.Text := FloatToStr(result);
+
+ if (operacao = 'menos') then
+ result := num - StrToFloat(Edit1.text);
+ Edit1.Text := FloatToStr(result);
+
+ if (operacao = 'dividir') then
+ result := num / StrToFloat(Edit1.text);
+ Edit1.Text := FloatToStr(result);
+
+ if (operacao = 'vezes') then
+ result := num * StrToFloat(Edit1.text);
+ Edit1.Text := FloatToStr(result);
+
+end;
+
+procedure TForm1.Button1Click(Sender: TObject);
+begin
+ Edit1.Text := Edit1.Text + '7';
+
+end;
+
+procedure TForm1.Button2Click(Sender: TObject);
+begin
+ Edit1.Text := Edit1.Text + '8';
+end;
+
+procedure TForm1.Button3Click(Sender: TObject);
+begin
+ Edit1.Text := Edit1.Text + '9';
+end;
+
+procedure TForm1.Button4Click(Sender: TObject);
+begin
+ Edit1.Text := Edit1.Text + '4';
+end;
+
+procedure TForm1.Button5Click(Sender: TObject);
+begin
+ Edit1.Text := Edit1.Text + '5';
+end;
+
+procedure TForm1.Button6Click(Sender: TObject);
+begin
+ Edit1.Text := Edit1.Text + '6';
+end;
+
+procedure TForm1.Button7Click(Sender: TObject);
+begin
+ Edit1.Text := Edit1.Text + '1';
+end;
+
+procedure TForm1.Button8Click(Sender: TObject);
+begin
+ Edit1.Text := Edit1.Text + '2';
+end;
+
+procedure TForm1.Button9Click(Sender: TObject);
+begin
+ Edit1.Text := Edit1.Text + '3';
+end;
+
+end.
